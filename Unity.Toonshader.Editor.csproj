@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{0A5D75D7-1252-F6BE-45B6-C10B5A8C9683}</ProjectGuid>
+    <ProjectGuid>{62A78277-9129-2689-FCB1-33149FA91D37}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Toonshader.Editor</AssemblyName>
@@ -1105,7 +1105,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Toonshader.csproj">
-      <Project>{80E885E5-E1A0-486C-0120-CC920AA53D55}</Project>
+      <Project>{44B32917-106E-E835-FF6D-E71359122841}</Project>
       <Name>Unity.Toonshader</Name>
     </ProjectReference>
   </ItemGroup>

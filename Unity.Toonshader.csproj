@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{80E885E5-E1A0-486C-0120-CC920AA53D55}</ProjectGuid>
+    <ProjectGuid>{44B32917-106E-E835-FF6D-E71359122841}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Toonshader</AssemblyName>
