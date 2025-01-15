@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using TMPro;
+using System.Diagnostics;
 public class Console : MonoBehaviour
 {
     public TMP_Text consoleText;
@@ -26,14 +27,14 @@ public class Console : MonoBehaviour
     {
         if (type == LogType.Error || type == LogType.Exception)
         {
-            string detailedLog = $"[{type}] {logString}\n{stackTrace}\nScript: {GetScriptName()}\nObject: {gameObject.name}";
+            string detailedLog = $"[{type}] {logString}\n{stackTrace}\nScript: {GetScriptName()}\nObject: {gameObject.name}\n{GetCallerInfo()}";
             logQueue.Enqueue(detailedLog);
             if (logQueue.Count > maxLogCount)
             {
                 logQueue.Dequeue();
             }
 
-            consoleText.text = string.Join("\n", logQueue.ToArray());
+            consoleText.text = string.Join("\n\n---\n\n", logQueue.ToArray());
             Canvas.ForceUpdateCanvases();
             scrollRect.verticalNormalizedPosition = 0;
         }
@@ -48,5 +49,11 @@ public class Console : MonoBehaviour
     string GetScriptName()
     {
         return GetType().Name;
+    }
+
+    string GetCallerInfo()
+    {
+        // Basic implementation for WebGL compatibility
+        return System.Environment.StackTrace;
     }
 }
