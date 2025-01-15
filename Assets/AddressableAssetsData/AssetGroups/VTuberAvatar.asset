@@ -1,0 +1,580 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: VTuberAvatar
+  m_EditorClassIdentifier: 
+  m_GroupName: VTuberAvatar
+  m_Data:
+    m_SerializedData: []
+  m_GUID: a87819147431a624b923fb668bd62219
+  m_SerializeEntries:
+  - m_GUID: 0b667505cb4cd6a49abcadcf654d7e6a
+    m_Address: VT_Girl_Costume_017
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_costume_017
+  - m_GUID: d1aa41a0206303e4f9593b0aeff1fd8e
+    m_Address: VT_Girl_Costume_035
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_costume_035
+  - m_GUID: 7765447e97f1dc247b7bbbd9ab883252
+    m_Address: VT_Girl_Costume_018
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_costume_018
+  - m_GUID: 8faccaae6aa5d1a4cbcaa6e5d60c7162
+    m_Address: VT_Girl_Costume_006
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_costume_006
+  - m_GUID: a77b8e69de128b3468cf86fab9980daa
+    m_Address: VT_Girl_Costume_042
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_costume_042
+  - m_GUID: ada6b820dd8c2e747bf5c009cf70bf1a
+    m_Address: VT_Girl_Costume_004
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_costume_004
+  - m_GUID: d256209804e67264181b566b802d4eca
+    m_Address: VT_Girl_Costume_015
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_costume_015
+  - m_GUID: dd8f8ef286795714cb1b11f56bde8022
+    m_Address: VT_Girl_Costume_020
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_costume_020
+  - m_GUID: 015de6ab5f80e104abf55487f1372a1b
+    m_Address: VT_Girl_Costume_027
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_costume_027
+  - m_GUID: 91bdb573ee586e74cadb8496039694ff
+    m_Address: VT_Girl_Costume_021
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_costume_021
+  - m_GUID: 67090095ff04a894e83a39a74c015c7a
+    m_Address: VT_Girl_Costume_030
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_costume_030
+  - m_GUID: f4337acf1deb3844eacf64993db00c13
+    m_Address: VT_Girl_Costume_022
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_costume_022
+  - m_GUID: d916ceeedef32f9439d0f1850b8a4ac7
+    m_Address: VT_Girl_Costume_011
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_costume_011
+  - m_GUID: 624c7622b2199b74a9e51327487180f4
+    m_Address: VT_Girl_Costume_039
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_costume_039
+  - m_GUID: b7644943d5edafe42a28d57fb308f73c
+    m_Address: VT_Girl_Costume_008
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_costume_008
+  - m_GUID: 358e54b42442e394493f92881983bf5e
+    m_Address: VT_Girl_Costume_012
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_costume_012
+  - m_GUID: 3697e23476fb72c4985f844e167d0e6c
+    m_Address: VT_Girl_Costume_009
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_costume_009
+  - m_GUID: a7c61c0161f1c1d478f1c8b92d6f62cb
+    m_Address: VT_Girl_Costume_040
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_costume_040
+  - m_GUID: a7b06e68054092d4482b5a64395d3b39
+    m_Address: VT_Girl_Costume_019
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_costume_019
+  - m_GUID: 185af82ca5efd69478152eb1c265f876
+    m_Address: VT_Girl_Costume_028
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_costume_028
+  - m_GUID: 0dd4a0e9a24c92747bda44c94d08513f
+    m_Address: VT_Girl_Costume_026
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_costume_026
+  - m_GUID: c046bedd017f2b04bb17a93622c1a715
+    m_Address: VT_Girl_Costume_014
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_costume_014
+  - m_GUID: 78956ed81e429e4408350d203108ffb4
+    m_Address: VT_Girl_Costume_031
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_costume_031
+  - m_GUID: cf25a9a8511ffa848aff8b3609024463
+    m_Address: VT_Girl_Costume_034
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_costume_034
+  - m_GUID: f6d5d9ee3fa98044cb3c82cf1d3e2360
+    m_Address: VT_Girl_Costume_037
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_costume_037
+  - m_GUID: 6dc1920a18e25cd48a81dab9065dd2e0
+    m_Address: VT_Girl_Costume_029
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_costume_029
+  - m_GUID: 3a9aa977e1e4d6541bb5e0ab4479a19c
+    m_Address: VT_Girl_Costume_032
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_costume_032
+  - m_GUID: ff54eda1b33e52b4e858cd5816eddbec
+    m_Address: VT_Girl_Costume_043
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_costume_043
+  - m_GUID: 25957399d6fa78d4bba3d5d3291e81dc
+    m_Address: VT_Girl_Hair_008_V1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_hair_008_v1
+  - m_GUID: 3b12c858f95a93447a6e55af40b57e97
+    m_Address: VT_Girl_Hair_014
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_hair_014
+  - m_GUID: 652e9a821874d1c4297a3ca07415c246
+    m_Address: VT_Girl_Hair_017_V2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_hair_017_v2
+  - m_GUID: 9ed9338cbc9db744f8e686d768275d45
+    m_Address: VT_Girl_Hair_022_V1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_hair_022_v1
+  - m_GUID: e95ca4356e5091f4f846575288b6a3ac
+    m_Address: VT_Girl_Hair_015_V1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_hair_015_v1
+  - m_GUID: 72bcdaf35089eb046bbccd56f84c0727
+    m_Address: VT_Girl_Hair_016
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_hair_016
+  - m_GUID: 3266d542d27298d4c86e4a8dbf8dd55f
+    m_Address: VT_Girl_Hair_017_V3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_hair_017_v3
+  - m_GUID: e1a96315d39e5fb4a8cc8f5da1300622
+    m_Address: VT_Girl_Hair_023
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_hair_023
+  - m_GUID: 621c3c2fbed0cc34993c1c780b63138c
+    m_Address: VT_Girl_Hair_019_V1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_hair_019_v1
+  - m_GUID: 5d4626b4069e3d94e8af2095b5283cc7
+    m_Address: VT_Girl_Hair_017_V4
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_hair_017_v4
+  - m_GUID: ec2fe34d21e18e74db78e33f83efba1a
+    m_Address: VT_Girl_Hair_013_V1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_hair_013_v1
+  - m_GUID: 9798e4b215c5d4d4da5f99987faf2bb2
+    m_Address: VT_Girl_Hair_013_V2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_hair_013_v2
+  - m_GUID: 51c1df7397958874b990f43e53b937b9
+    m_Address: VT_Girl_Hair_017_V1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_hair_017_v1
+  - m_GUID: 4bb4b82f1547a3543909fe49d64ff2f5
+    m_Address: VT_Girl_Hair_027_V2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_hair_027_v2
+  - m_GUID: d203facfe887e1c4481d31f504f03579
+    m_Address: VT_Girl_Hair_019_V2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_hair_019_v2
+  - m_GUID: 0d8d266d2ee710b4ab046402d84e198d
+    m_Address: VT_Girl_Hair_025_V1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_hair_025_v1
+  - m_GUID: d33944cdea3fd6743975b54035a3a46e
+    m_Address: VT_Girl_Hair_020
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_hair_020
+  - m_GUID: d09750b9417eaa444bf5842ca62d2986
+    m_Address: VT_Girl_Hair_022_V2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_hair_022_v2
+  - m_GUID: bccbfcd2efc4f2040a1d6b54b219fa64
+    m_Address: VT_Girl_Hair_027_V1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_hair_027_v1
+  - m_GUID: 088d3c62a073b5144a4efdf1700ee1b2
+    m_Address: VT_Girl_Hair_018_V2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_hair_018_v2
+  - m_GUID: cec5d1ce0552d324bb41a5cee66da98e
+    m_Address: VT_Girl_Hair_018_V1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_hair_018_v1
+  - m_GUID: 7fb5e54bef2370e45ad2c162e5f784ef
+    m_Address: VT_Girl_Hair_026
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_hair_026
+  - m_GUID: 56924e409af27714bac80fff76977b7a
+    m_Address: VT_Girl_Hair_005
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_hair_005
+  - m_GUID: e4b2a837ee8a8ab42ac60027bf334390
+    m_Address: VT_Girl_Hair_025_V2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_hair_025_v2
+  - m_GUID: 593ee572bb407774e9c58462bca75479
+    m_Address: VT_Girl_Hair_008
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_hair_008
+  - m_GUID: cc05bcd2ce26f9f4985708cab7597785
+    m_Address: VT_Girl_Hair_024
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_hair_024
+  - m_GUID: 516d31153358ae24e859f419043fa4ab
+    m_Address: VT_Girl_Hair_015_V2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_hair_015_v2
+  - m_GUID: 83632f2c2b9d62e498746fe901540b32
+    m_Address: VT_Girl_Hair_015_V3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_hair_015_v3
+  - m_GUID: 01e79a7538e78db4aa8a9b23c7116e68
+    m_Address: VT_Girl_Shoes_028
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_shoes_028
+  - m_GUID: 4f9ebf00379bddb4a99b055d3f7d4aea
+    m_Address: VT_Girl_Shoes_034
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_shoes_034
+  - m_GUID: 2f934389fd8c6964da03f2827f573ea8
+    m_Address: VT_Girl_Shoes_022
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_shoes_022
+  - m_GUID: 3200c3d298fb66b42b1689aa17af290f
+    m_Address: VT_Girl_Shoes_035_V1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_shoes_035_v1
+  - m_GUID: de71a0a468a14fe45b065917ac1f6376
+    m_Address: VT_Girl_Shoes_036
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_shoes_036
+  - m_GUID: 51a7e1091ab4ed842a731791f25406fc
+    m_Address: VT_Girl_Shoes_016_V1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_shoes_016_v1
+  - m_GUID: bb293bfb113919f4493773f6da649790
+    m_Address: VT_Girl_Shoes_021
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_shoes_021
+  - m_GUID: e8083ecd09248ec43b383c921301fed7
+    m_Address: VT_Girl_Shoes_018_V1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_shoes_018_v1
+  - m_GUID: d2dc13ffcced07a4aa27f35fe609ae58
+    m_Address: VT_Girl_Shoes_024
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_shoes_024
+  - m_GUID: adb438f6b49c5274098ce461b0dfcb12
+    m_Address: VT_Girl_Shoes_026_V2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_shoes_026_v2
+  - m_GUID: 8dee53a45a9a30944a75d61029520f37
+    m_Address: VT_Girl_Shoes_026_V1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_shoes_026_v1
+  - m_GUID: dfaa5a25bf0680b4e86eb4cee0c640e7
+    m_Address: VT_Girl_Shoes_038_V2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_shoes_038_v2
+  - m_GUID: 703137d7afd86b84fa7a496d87f1ebac
+    m_Address: VT_Girl_Shoes_030
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_shoes_030
+  - m_GUID: 3c008f7f8eef58844a2094d22ab3b7aa
+    m_Address: VT_Girl_Shoes_035_V2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_shoes_035_v2
+  - m_GUID: cb653aca9fe062d4d8884fbb77bd8b46
+    m_Address: VT_Girl_Shoes_019
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_shoes_019
+  - m_GUID: 090cb12ed6e7836479a96c8ec98414cc
+    m_Address: VT_Girl_Shoes_040
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_shoes_040
+  - m_GUID: f90f4f31725390842b8bf6a17a28dc72
+    m_Address: VT_Girl_Shoes_039_V2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_shoes_039_v2
+  - m_GUID: 8c367f273d05dbe459a1a1cdd8a0e8f5
+    m_Address: VT_Girl_Shoes_017
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_shoes_017
+  - m_GUID: 0c4c12a52f034644dae0c15754bc0cbc
+    m_Address: VT_Girl_Shoes_029
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_shoes_029
+  - m_GUID: 1bc33d9c1c82c904f8a3d1a31a722b64
+    m_Address: VT_Girl_Shoes_016_V2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_shoes_016_v2
+  - m_GUID: cd30d7de1b28ffd4cbfed86e56334cd1
+    m_Address: VT_Girl_Shoes_038_V1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_shoes_038_v1
+  - m_GUID: 26dc1fa65c000024eaa3cbf2ad735805
+    m_Address: VT_Girl_Shoes_018_V4
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_shoes_018_v4
+  - m_GUID: 3880111382747f843b58b840979213a5
+    m_Address: VT_Girl_Shoes_047
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_shoes_047
+  - m_GUID: 2a2b06babf718ab4183442a8050ddf1f
+    m_Address: VT_Girl_Shoes_039_V1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_shoes_039_v1
+  - m_GUID: 022e21f0771ffdd4c818326a160f94de
+    m_Address: VT_Girl_Shoes_018_V3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_shoes_018_v3
+  - m_GUID: c3e39d5f30fc8e04ab999109f464bc13
+    m_Address: VT_Girl_Shoes_018_V2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_shoes_018_v2
+  - m_GUID: a44255ccba09ca94da7779fcf1c0cae8
+    m_Address: VT_Girl_Shoes_023
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_girl_shoes_023
+  - m_GUID: c4b74bdb33e2d4d45a6015a1161bce8e
+    m_Address: VT_Eyes_1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_eyes_1
+  - m_GUID: c40c2a37b6bcd2541ac25760a9cbc38c
+    m_Address: VT_Eyes_2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_eyes_2
+  - m_GUID: e1d027f28a279444aad161c44f56a3b4
+    m_Address: VT_Eyes_3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_eyes_3
+  - m_GUID: 3c36a9ebf75477247a667b6e2c8923e4
+    m_Address: VT_Eyes_5
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_eyes_5
+  - m_GUID: b14095eb9cb3fd84b9edda0c620c1e6f
+    m_Address: VT_Eyes_6
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_eyes_6
+  - m_GUID: 85bd9722c467a4148858ca7905dbf29d
+    m_Address: VT_Eyes_7
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_eyes_7
+  - m_GUID: 543082cbb22f8e04d8caa2b20278382e
+    m_Address: VT_Eyes_8
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_eyes_8
+  - m_GUID: 9b9cb1d3a1344e24a8d8c0f0e889ee3e
+    m_Address: VT_Eyes_9
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_eyes_9
+  - m_GUID: f2bc426a9a09e6e4da89767025c0948b
+    m_Address: VT_Eyes_10
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_eyes_10
+  - m_GUID: 5199851deeb0c7642a84d9b46847a4b2
+    m_Address: VT_Eyes_11
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_eyes_11
+  - m_GUID: 519469d749de1fa4a983a960f57b28dd
+    m_Address: VT_Eyes_12
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_eyes_12
+  - m_GUID: cc2a33aff96c8604d9ec8020724eceee
+    m_Address: VT_Eyes_13
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_eyes_13
+  - m_GUID: d5ddd6537699e4241b2107eaeea04419
+    m_Address: VT_Eyes_14
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_eyes_14
+  - m_GUID: 82afca6526b84a344bf86199c1a6389d
+    m_Address: VT_Eyes_15
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_eyes_15
+  - m_GUID: 13f2af63fc3f21740ba5c28af17d55a4
+    m_Address: VT_Eyes_16
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_eyes_16
+  - m_GUID: 98153ee92bda4d64a9907dfb3142a445
+    m_Address: VT_Eyes_17
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_eyes_17
+  - m_GUID: de2bc41f33da51f428cd4b875a76f5f8
+    m_Address: VT_Eyes_18
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_eyes_18
+  - m_GUID: 5fef4fcc725f53e4e94992e538ea08ce
+    m_Address: VT_Eyes_19
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_eyes_19
+  - m_GUID: 9e92a56a774a69c499b0fe1286d218c9
+    m_Address: VT_Eyes_20
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_eyes_20
+  - m_GUID: a41fd194d3be66442950edf2d7bc0a20
+    m_Address: VT_Eyes_21
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_eyes_21
+  - m_GUID: fa1c96bb69c16774bb562d2bd4653260
+    m_Address: VT_Eyes_22
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_eyes_22
+  - m_GUID: 526db6763ad28f040afc5e55b5f5107a
+    m_Address: VT_Eyes_23
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_eyes_23
+  - m_GUID: 598b1706c9997a94aa6e9d9f4a1a62af
+    m_Address: VT_Eyes_24
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_eyes_24
+  - m_GUID: f221c4a81167c174c897970d48e8e955
+    m_Address: VT_Eyes_25
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_eyes_25
+  - m_GUID: 983c0450499398c4cb3e329c5ab0a3f4
+    m_Address: VT_Eyes_26
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_eyes_26
+  - m_GUID: f496c7a4f660aee419842c1a8ce6be73
+    m_Address: VT_Eyes_27
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_eyes_27
+  - m_GUID: 25b2fa988e6e6e2478a25bb8907d3075
+    m_Address: VT_Eyes_28
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_eyes_28
+  - m_GUID: 5f4f580328e7a24469ebb00c7d0357ad
+    m_Address: VT_Eyes_30
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - vt_eyes_30
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: ec07f1ddbc2987b4ebb55ed186feac66, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: e453ae2f504e259459c3f8fb0fcb140c, type: 2}
+    - {fileID: 11400000, guid: 45a5134ac3f829f45946db20425e7a66, type: 2}

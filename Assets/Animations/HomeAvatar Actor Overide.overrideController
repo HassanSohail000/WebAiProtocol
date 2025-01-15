@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HomeAvatar Actor Overide
+  m_Controller: {fileID: 9100000, guid: dac36fc3d74da8f4e828fb818cb223cc, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 1827226128182048838, guid: 26b595ca8a22cdc4fbb704aee96426f2, type: 3}
+    m_OverrideClip: {fileID: 0}
+  - m_OriginalClip: {fileID: 7400000, guid: 9f98266a6fef2e54e804c9f53ee89224, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: bf9380c1d801f254f9379eb1da3ba171, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 11a8865277b32d24199c5027c43a31fc, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 21cd6d713cb01d24ba527c19d83f3fb4, type: 2}
