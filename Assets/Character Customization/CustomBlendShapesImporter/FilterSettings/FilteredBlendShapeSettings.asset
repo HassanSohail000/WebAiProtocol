@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79b4adae9d9d9d8408604cd3f467bafb, type: 3}
+  m_Name: FilteredBlendShapeSettings
+  m_EditorClassIdentifier: 
+  AllowedFaceBlendShapesList: 090000000000000008000000
+  AllowedNoseBlendShapesList: 1a0000001b00000027000000
+  AllowedEyesBlendShapesList: 290000002d000000
+  AllowedEyeBrowsBlendShapesList: 370000003d0000003c000000
+  AllowedLipsBlendShapesList: 130000001900000014000000

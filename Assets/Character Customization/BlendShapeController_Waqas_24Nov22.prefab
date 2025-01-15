@@ -1,0 +1,995 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3920497077374596554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3920497077374596564}
+  - component: {fileID: 3920497077374596555}
+  m_Layer: 0
+  m_Name: BlendShapeController_Waqas_24Nov22
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3920497077374596564
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3920497077374596554}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3920497077374596555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3920497077374596554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f125633710eace44293fca3ad581fd4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blendHolder: {fileID: 0}
+  allBlendShapes:
+  - itemName: 0.EyeBrow-browDownLeft
+    AxisType: 1
+    blendShapeName: 5
+    index: 0
+    minValue: 0
+    maxValue: 80
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 1.EyeBrow-browDownRight
+    AxisType: 1
+    blendShapeName: 5
+    index: 1
+    minValue: 0
+    maxValue: 80
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 2.EyeBrow-browInnerUp
+    AxisType: 1
+    blendShapeName: 5
+    index: 2
+    minValue: -50
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 3.EyeBrow-browOuterUpLeft
+    AxisType: 1
+    blendShapeName: 5
+    index: 3
+    minValue: -50
+    maxValue: 50
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 4.EyeBrow-browOuterUpRight
+    AxisType: 1
+    blendShapeName: 5
+    index: 4
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 5.Eye-eyeBlinkLeft
+    AxisType: 1
+    blendShapeName: 2
+    index: 8
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 6.Eye-eyeBlinkRight
+    AxisType: 1
+    blendShapeName: 2
+    index: 9
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 7.Eye-eyeLookDownLeft
+    AxisType: 1
+    blendShapeName: 2
+    index: 10
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 8.Eye-eyeLookDownRight
+    AxisType: 1
+    blendShapeName: 2
+    index: 11
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 9.Eye-eyeLookInLeft
+    AxisType: 1
+    blendShapeName: 2
+    index: 12
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 10.Eye-eyeLookInRight
+    AxisType: 1
+    blendShapeName: 2
+    index: 13
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 11.Eye-eyeLookOutLeft
+    AxisType: 0
+    blendShapeName: 2
+    index: 14
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 12.Eye-eyeLookOutRight
+    AxisType: 0
+    blendShapeName: 2
+    index: 15
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 13.Eye-eyeLookUpLeft
+    AxisType: 1
+    blendShapeName: 2
+    index: 16
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 14.Eye-eyeLookUpRight
+    AxisType: 1
+    blendShapeName: 2
+    index: 17
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 15.Eye-eyeSquintLeft
+    AxisType: 1
+    blendShapeName: 2
+    index: 18
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 16.Eye-eyeSquintRight
+    AxisType: 1
+    blendShapeName: 2
+    index: 19
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 17.Eye-eyeWideLeft
+    AxisType: 0
+    blendShapeName: 2
+    index: 20
+    minValue: -100
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 18.Eye-eyeWideRight
+    AxisType: 0
+    blendShapeName: 2
+    index: 21
+    minValue: -100
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 19.Eyes-eysShape_Almond
+    AxisType: 1
+    blendShapeName: 2
+    index: 85
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 20.Eyes-eysShape_hooded
+    AxisType: 1
+    blendShapeName: 2
+    index: 86
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 21.Eyes-eysShape_downturned
+    AxisType: 1
+    blendShapeName: 2
+    index: 87
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 22.Eyes-eysShape_Monolid
+    AxisType: 1
+    blendShapeName: 2
+    index: 88
+    minValue: -25
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 23.Face-cheekPuff
+    AxisType: 0
+    blendShapeName: 1
+    index: 5
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 24.Face-cheekSquintLeft
+    AxisType: 1
+    blendShapeName: 1
+    index: 6
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 25.Face-cheekSquintRight
+    AxisType: 1
+    blendShapeName: 1
+    index: 7
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 26.Face-jawForward
+    AxisType: 1
+    blendShapeName: 1
+    index: 22
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 27.Face-jawLeft
+    AxisType: 0
+    blendShapeName: 1
+    index: 23
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 28.Face-jawOpen
+    AxisType: 1
+    blendShapeName: 1
+    index: 24
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 29.Face-jawRight
+    AxisType: 1
+    blendShapeName: 1
+    index: 25
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 30.Face-mouthClose
+    AxisType: 1
+    blendShapeName: 1
+    index: 26
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 31.Face-Chin_Protruding
+    AxisType: 1
+    blendShapeName: 1
+    index: 91
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 32.Face-Chin_Receding
+    AxisType: 0
+    blendShapeName: 1
+    index: 92
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 33.Face-Chin_Narrow
+    AxisType: 0
+    blendShapeName: 1
+    index: 93
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 34.Face-Chin_Long
+    AxisType: 1
+    blendShapeName: 1
+    index: 94
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 35.Face-Chin_Square
+    AxisType: 1
+    blendShapeName: 1
+    index: 95
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 36.Face-Face_Rectangular
+    AxisType: 1
+    blendShapeName: 1
+    index: 52
+    minValue: 0
+    maxValue: 80
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 37.Face-Face_Heart
+    AxisType: 1
+    blendShapeName: 1
+    index: 54
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 38.Face-Face_Round
+    AxisType: 1
+    blendShapeName: 1
+    index: 55
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 39.Face-Face_Diamond
+    AxisType: 0
+    blendShapeName: 1
+    index: 56
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 40.Face-Face_Oval
+    AxisType: 1
+    blendShapeName: 1
+    index: 57
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 41.FaceBone-Head
+    AxisType: 1
+    blendShapeName: 1
+    index: 66
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 1
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData:
+    - boneName: HeadScaleX
+      workingTransform: 1
+      workingAxes: 1
+      minValue: 0.95
+      maxValue: 1.05
+      reverseMyvalue: 0
+    - boneName: HeadScaleY
+      workingTransform: 1
+      workingAxes: 2
+      minValue: 0.95
+      maxValue: 1.05
+      reverseMyvalue: 0
+  - itemName: 42.Lips-mouthDimpleLeft
+    AxisType: 0
+    blendShapeName: 4
+    index: 27
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 43.Lips-mouthDimpleRight
+    AxisType: 1
+    blendShapeName: 4
+    index: 28
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 44.Lips-mouthFrownLeft
+    AxisType: 1
+    blendShapeName: 4
+    index: 29
+    minValue: -100
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 45.Lips-mouthFrownRight
+    AxisType: 1
+    blendShapeName: 4
+    index: 30
+    minValue: -100
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 46.Lips-mouthFunnel
+    AxisType: 1
+    blendShapeName: 4
+    index: 31
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 47.Lips-mouthFunnel
+    AxisType: 1
+    blendShapeName: 4
+    index: 32
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 48.Lips-mouthPucker
+    AxisType: 0
+    blendShapeName: 4
+    index: 38
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 49.Lips-mouthSmileLeft
+    AxisType: 1
+    blendShapeName: 4
+    index: 44
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 50.Lips-mouthSmileRight
+    AxisType: 1
+    blendShapeName: 4
+    index: 45
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 51.Lips-mouthStretchLeft
+    AxisType: 0
+    blendShapeName: 4
+    index: 45
+    minValue: -50
+    maxValue: 50
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 52.Lips-mouthStretchRight
+    AxisType: 0
+    blendShapeName: 4
+    index: 46
+    minValue: -50
+    maxValue: 50
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 53.Lips-HeavyUpperLip
+    AxisType: 1
+    blendShapeName: 4
+    index: 58
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 54.Lips-RoundLip
+    AxisType: 1
+    blendShapeName: 4
+    index: 59
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 55.Lips-BowShapedLips
+    AxisType: 1
+    blendShapeName: 4
+    index: 60
+    minValue: -50
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 56.Lips-WideLips
+    AxisType: 0
+    blendShapeName: 4
+    index: 61
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 57.Lips-downwardTurnedLips
+    AxisType: 1
+    blendShapeName: 4
+    index: 62
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 58.Lips-HeavyLowerLips
+    AxisType: 0
+    blendShapeName: 4
+    index: 63
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 59.Lips-HeartShapedLips
+    AxisType: 1
+    blendShapeName: 4
+    index: 64
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 60.Lips-FullLips
+    AxisType: 0
+    blendShapeName: 4
+    index: 65
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 61.Lips-ThinLips
+    AxisType: 1
+    blendShapeName: 4
+    index: 66
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 62.Nose-noseSneerLeft
+    AxisType: 1
+    blendShapeName: 6
+    index: 50
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 63.Nose-noseSneerRight
+    AxisType: 1
+    blendShapeName: 6
+    index: 51
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 64.Nose-Nostril_front_narrow
+    AxisType: 1
+    blendShapeName: 6
+    index: 68
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 65.Nose-Nostril_flat_base
+    AxisType: 1
+    blendShapeName: 6
+    index: 69
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 66.Nose-Nostril_wide_standard
+    AxisType: 1
+    blendShapeName: 6
+    index: 70
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 67.Nose-Nostril_Straight_base
+    AxisType: 1
+    blendShapeName: 6
+    index: 71
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 68.Nose-Nostril_Base_standard2
+    AxisType: 1
+    blendShapeName: 6
+    index: 72
+    minValue: -100
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 69.Nose-Nostril_straight_base_wide
+    AxisType: 0
+    blendShapeName: 6
+    index: 73
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 70.Nose-Nostril_Tip_wide
+    AxisType: 0
+    blendShapeName: 6
+    index: 74
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 71.Nose-Nostril_straight_Tip
+    AxisType: 0
+    blendShapeName: 6
+    index: 75
+    minValue: 0
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 72.Nose-Nostril_Standard3
+    AxisType: 0
+    blendShapeName: 6
+    index: 79
+    minValue: -100
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 73.Nose-Nostril_Wide_Base
+    AxisType: 0
+    blendShapeName: 6
+    index: 80
+    minValue: -50
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 74.Nose-Nostril_base_normal
+    AxisType: 1
+    blendShapeName: 6
+    index: 82
+    minValue: -50
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 75.Nose-Nose_Bridge_Version01
+    AxisType: 0
+    blendShapeName: 6
+    index: 83
+    minValue: -25
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 76.Nose-Nose_Bridge_Version02
+    AxisType: 1
+    blendShapeName: 6
+    index: 84
+    minValue: -25
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 77.Nose-Nostril_Sharp_tip
+    AxisType: 1
+    blendShapeName: 6
+    index: 75
+    minValue: -25
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 78.Nose-Nostril_standard
+    AxisType: 1
+    blendShapeName: 6
+    index: 77
+    minValue: -25
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 79.Nose-Nostril_Standard2
+    AxisType: 1
+    blendShapeName: 6
+    index: 78
+    minValue: -25
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 80.Nose-Nostril_Standard_narrow
+    AxisType: 1
+    blendShapeName: 6
+    index: 76
+    minValue: -25
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 81.Nose-Nostril_WideMid
+    AxisType: 1
+    blendShapeName: 6
+    index: 81
+    minValue: -25
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 82.Nose-Nostril_WideStandard
+    AxisType: 1
+    blendShapeName: 6
+    index: 69
+    minValue: -25
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 83.Eye-Round
+    AxisType: 1
+    blendShapeName: 2
+    index: 90
+    minValue: -25
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
+  - itemName: 84.Eye-Upturned
+    AxisType: 1
+    blendShapeName: 2
+    index: 89
+    minValue: -25
+    maxValue: 100
+    reverseMyValue: 0
+    boneAvailable: 0
+    maleBoneObj: {fileID: 0}
+    femaleBoneObj: {fileID: 0}
+    boneData: []
