@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{8B939418-6909-D9E7-65D1-1A1B34D20A61}</ProjectGuid>
+    <ProjectGuid>{FFFB096C-4661-0158-70A1-C6A55DD31053}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Toonshader.EditorTests</AssemblyName>
