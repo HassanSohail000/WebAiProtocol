@@ -210,7 +210,6 @@ UnityEngine.Application::get_unityVersion
 UnityEngine.Application::get_version
 UnityEngine.Application::OpenURL
 UnityEngine.Application::Quit
-UnityEngine.Application::SetLogCallbackDefined
 UnityEngine.Application::set_runInBackground
 UnityEngine.Application::set_targetFrameRate
 UnityEngine.Application::get_internetReachability

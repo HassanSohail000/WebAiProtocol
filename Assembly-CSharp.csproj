@@ -120,7 +120,6 @@
     <Compile Include="Assets\3rd Party Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Scripts\ThirdPersonController.cs" />
     <Compile Include="Assets\Scripts\CharacterCustomization\AvatarCustomizationManager.cs" />
     <Compile Include="Assets\Scripts\ConstantsGod.cs" />
-    <Compile Include="Assets\Scripts\CharacterBodyParts.cs" />
     <Compile Include="Assets\3rd Party Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
     <Compile Include="Assets\3rd Party Assets\Demigiant\DOTweenPro\DOTweenTextMeshPro.cs" />
     <Compile Include="Assets\Scripts\BuildVersion\BuildVersionChecker.cs" />
@@ -138,6 +137,7 @@
     <Compile Include="Assets\Scripts\ScrollContent.cs" />
     <Compile Include="Assets\Scripts\StoreScripts\AddListnerToColorBtns.cs" />
     <Compile Include="Assets\3rd Party Assets\SuperStar\AndroidPermissionHandler.cs" />
+    <Compile Include="Assets\Scripts\CharacterBodyParts.cs" />
     <Compile Include="Assets\3rd Party Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Standard Assets\CrossPlatformInput\Scripts\TouchPad.cs" />
     <Compile Include="Assets\Scripts\StoreScripts\AvatarController.cs" />
     <Compile Include="Assets\3rd Party Assets\CSVSerializer\Demo\Scene\UIRankingSlot.cs" />
@@ -212,7 +212,6 @@
     <Compile Include="Assets\Scripts\UI\UIEventHandler.cs" />
     <Compile Include="Assets\3rd Party Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
     <Compile Include="Assets\3rd Party Assets\SuperStar\RestApi.cs" />
-    <Compile Include="Assets\Scripts\Console.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Packages\System.Text.Json.8.0.4\analyzers\dotnet\roslyn4.4\cs\zh-Hant\System.Text.Json.SourceGeneration.resources.dll" />
@@ -1276,10 +1275,6 @@
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEngine.SpatialTracking">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.EditorCoroutines.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
       <Private>False</Private>
@@ -1380,10 +1375,6 @@
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEngine.XR.LegacyInputHelpers">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
       <Private>False</Private>
@@ -1396,10 +1387,6 @@
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEditor.XR.LegacyInputHelpers">
-      <HintPath>Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
       <Private>False</Private>
@@ -1410,10 +1397,6 @@
     </Reference>
     <Reference Include="Unity.ScriptableBuildPipeline.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.SpatialTracking">
-      <HintPath>Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
