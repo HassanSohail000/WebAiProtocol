@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Abc\\Documents\\WebAiProtocol\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C35AF023-3A7D-8DC1-7CA6-2D77D94682D0}|Assembly-CSharp.csproj|c:\\users\\abc\\documents\\webaiprotocol\\assets\\scripts\\console.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C35AF023-3A7D-8DC1-7CA6-2D77D94682D0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\console.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C35AF023-3A7D-8DC1-7CA6-2D77D94682D0}|Assembly-CSharp.csproj|c:\\users\\abc\\documents\\webaiprotocol\\assets\\scripts\\localization scripts\\localizationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C35AF023-3A7D-8DC1-7CA6-2D77D94682D0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\localization scripts\\localizationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Abc\\Documents\\WebAiProtocol\\Assets\\Scripts\\Console.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Console.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C35AF023-3A7D-8DC1-7CA6-2D77D94682D0}|Assembly-CSharp.csproj|C:\\Users\\Abc\\Documents\\WebAiProtocol\\assets\\3rd party assets\\superstar\\androidpermissionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -18,11 +22,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "LocalizationManager.cs",
+              "DocumentMoniker": "C:\\Users\\Abc\\Documents\\WebAiProtocol\\Assets\\Scripts\\Localization Scripts\\LocalizationManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Localization Scripts\\LocalizationManager.cs",
+              "ToolTip": "C:\\Users\\Abc\\Documents\\WebAiProtocol\\Assets\\Scripts\\Localization Scripts\\LocalizationManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Localization Scripts\\LocalizationManager.cs",
+              "ViewState": "AgIAAMUAAAAAAAAAAAAUwOoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T11:26:11.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "AndroidPermissionHandler.cs",
               "DocumentMoniker": "C:\\Users\\Abc\\Documents\\WebAiProtocol\\Assets\\3rd Party Assets\\SuperStar\\AndroidPermissionHandler.cs",
               "RelativeDocumentMoniker": "Assets\\3rd Party Assets\\SuperStar\\AndroidPermissionHandler.cs",
@@ -34,13 +51,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Console.cs",
               "DocumentMoniker": "C:\\Users\\Abc\\Documents\\WebAiProtocol\\Assets\\Scripts\\Console.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Console.cs",
               "ToolTip": "C:\\Users\\Abc\\Documents\\WebAiProtocol\\Assets\\Scripts\\Console.cs",
               "RelativeToolTip": "Assets\\Scripts\\Console.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-15T10:23:05.889Z",
               "EditorCaption": ""
