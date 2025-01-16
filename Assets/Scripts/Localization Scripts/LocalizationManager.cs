@@ -189,9 +189,7 @@ public class LocalizationManager : MonoBehaviour
         {
             return "";
         }
-#else
-
-#if UNITY_ANDROID
+#elif UNITY_ANDROID
         try
         {
             var locale = new AndroidJavaClass("java.util.Locale");
@@ -203,8 +201,7 @@ public class LocalizationManager : MonoBehaviour
         {
             return "Error";
         }
-#else
-#if UNITY_IOS
+#elif UNITY_IOS
         string newLanguage = Application.systemLanguage.ToString();
 
         if (newLanguage == "English")
@@ -219,11 +216,11 @@ public class LocalizationManager : MonoBehaviour
         {
             return "";
         }
-#endif
-#endif
+#else
+        return "en"; // Default return value for other platforms
 #endif
     }
-    // returns "eng" / "deu" / ...
+    // returns "en" / "deu" / ...
 
     public static string GetISO3Language()
     {
@@ -242,8 +239,7 @@ public class LocalizationManager : MonoBehaviour
         {
             return "";
         }
-#else
-#if UNITY_ANDROID
+#elif UNITY_ANDROID
         try
         {
             var locale = new AndroidJavaClass("java.util.Locale");
@@ -255,8 +251,7 @@ public class LocalizationManager : MonoBehaviour
         {
             return "Error";
         }
-#else
-#if UNITY_IOS
+#elif UNITY_IOS
         string newLanguage = Application.systemLanguage.ToString();
 
         if (newLanguage == "English")
@@ -271,8 +266,8 @@ public class LocalizationManager : MonoBehaviour
         {
             return "";
         }
-#endif
-#endif
+#else
+        return "en"; // Default return value for other platforms
 #endif
     }
 
