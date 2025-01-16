@@ -1,0 +1,2 @@
+git rm -r --cached .vs
+git commit -m "Remove .vs from repository"
