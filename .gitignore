@@ -122,3 +122,6 @@ crash-reports/
 
 # Ignore build results
 /[Bb]uilds/
+
+# Ignore server data
+/ServerData/
