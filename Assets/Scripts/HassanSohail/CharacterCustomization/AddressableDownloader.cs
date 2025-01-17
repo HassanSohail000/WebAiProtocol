@@ -65,19 +65,19 @@ public class AddressableDownloader : MonoBehaviour
             AsyncOperationHandle DownloadingCatalog = Addressables.LoadContentCatalogAsync(catalogFilePath, true);
             DownloadingCatalog.Completed += OnCatalogDownload;
 #elif UNITY_WEBGL
-                        string catalogFilePath = Application.streamingAssetsPath + "/WebGL/XanaAddressableCatalog.json";
-                        AsyncOperationHandle DownloadingCatalog = Addressables.LoadContentCatalogAsync(catalogFilePath, true);
-                        DownloadingCatalog.Completed += OnCatalogDownload;
+            string catalogFilePath = Application.streamingAssetsPath + "/WebGL/XanaAddressableCatalog.json";
+            AsyncOperationHandle DownloadingCatalog = Addressables.LoadContentCatalogAsync(catalogFilePath, true);
+            DownloadingCatalog.Completed += OnCatalogDownload;
 #else
-                        BuildScriptableObject buildScriptableObject = Resources.Load("BuildVersion/BuildVersion") as BuildScriptableObject;
-                        if (buildScriptableObject == null)
-                        {
-                            Debug.LogError("BuildScriptableObject is null. Make sure the BuildVersion asset is available in Resources/BuildVersion.");
-                            return;
-                        }
+            BuildScriptableObject buildScriptableObject = Resources.Load("BuildVersion/BuildVersion") as BuildScriptableObject;
+            if (buildScriptableObject == null)
+            {
+                Debug.LogError("BuildScriptableObject is null. Make sure the BuildVersion asset is available in Resources/BuildVersion.");
+                return;
+            }
 
-                        AsyncOperationHandle DownloadingCatalog = Addressables.LoadContentCatalogAsync(buildScriptableObject.addressableCatalogFilePath, true);
-                        DownloadingCatalog.Completed += OnCatalogDownload;
+            AsyncOperationHandle DownloadingCatalog = Addressables.LoadContentCatalogAsync(buildScriptableObject.addressableCatalogFilePath, true);
+            DownloadingCatalog.Completed += OnCatalogDownload;
 #endif
         }
     }
