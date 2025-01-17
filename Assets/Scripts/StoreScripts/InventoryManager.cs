@@ -210,7 +210,7 @@ public class InventoryManager : MonoBehaviour
         checkforSavebutton = false;
 
         DisableColorPanels();
-        characterBodyParts = GameManager.Instance.mainCharacter.GetComponent<CharacterBodyParts>();
+        //characterBodyParts = GameManager.Instance.mainCharacter.GetComponent<CharacterBodyParts>();
         //for (int i = 0; i < 20; i++) { itemButtonsPool.Add( Instantiate(ItemsBtnPrefab)); }
     }
     [SerializeField]
