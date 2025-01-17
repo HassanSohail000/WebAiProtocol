@@ -192,7 +192,7 @@ public class InventoryManager : MonoBehaviour
     public Action storeOpen;
     //public UGCItemsData ugcItemsData;
     //public UGCItemData itemData;
-    CharacterBodyParts characterBodyParts;
+    public CharacterBodyParts characterBodyParts;
     public Sprite defaultPngForSkinIcon;
     AvatarController _avatarController;
     public static event Action<BackButtonHandler.screenTabs> OnScreenTabStateChange;
