@@ -18,10 +18,12 @@ public class AddressableDownloader : MonoBehaviour
     public static AddressableDownloader Instance;
     public static List<AsyncOperationHandle> bundleAsyncOperationHandle = new List<AsyncOperationHandle>();
     public AddressableMemoryReleaser MemoryManager;
+
     private void Start()
     {
         presetItemCount = 0;
     }
+
     private void Awake()
     {
         if (Instance == null)
@@ -29,6 +31,12 @@ public class AddressableDownloader : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(this.gameObject);
             MemoryManager = GetComponent<AddressableMemoryReleaser>();
+
+            if (MemoryManager == null)
+            {
+                Debug.LogError("MemoryManager is null. Make sure AddressableMemoryReleaser component is attached to the GameObject.");
+            }
+
             DownloadCatalogFile();
         }
         else
@@ -36,7 +44,9 @@ public class AddressableDownloader : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
     bool isDownloading = false;
+
     public void DownloadCatalogFile()
     {
         if (!isDownloading)
@@ -44,19 +54,34 @@ public class AddressableDownloader : MonoBehaviour
             isDownloading = true;
 #if UNITY_EDITOR
             string catalogFilePath = UnityEditor.AddressableAssets.AddressableAssetSettingsDefaultObject.Settings.profileSettings.GetValueByName(UnityEditor.AddressableAssets.AddressableAssetSettingsDefaultObject.Settings.activeProfileId, "Remote.LoadPath");
-            //Debug.LogError(catalogFilePath);
-            //Debug.Log("<color=red>" + catalogFilePath + "</color>");
+            if (string.IsNullOrEmpty(catalogFilePath))
+            {
+                Debug.LogError("Catalog file path is null or empty.");
+                return;
+            }
+
             catalogFilePath = catalogFilePath.Replace("[BuildTarget]", UnityEditor.EditorUserBuildSettings.activeBuildTarget.ToString());
             catalogFilePath = catalogFilePath + "/XanaAddressableCatalog.json";
             AsyncOperationHandle DownloadingCatalog = Addressables.LoadContentCatalogAsync(catalogFilePath, true);
             DownloadingCatalog.Completed += OnCatalogDownload;
+#elif UNITY_WEBGL
+                        string catalogFilePath = Application.streamingAssetsPath + "/WebGL/XanaAddressableCatalog.json";
+                        AsyncOperationHandle DownloadingCatalog = Addressables.LoadContentCatalogAsync(catalogFilePath, true);
+                        DownloadingCatalog.Completed += OnCatalogDownload;
 #else
-              BuildScriptableObject buildScriptableObject = Resources.Load("BuildVersion/BuildVersion") as BuildScriptableObject;
-                      AsyncOperationHandle DownloadingCatalog = Addressables.LoadContentCatalogAsync(buildScriptableObject.addressableCatalogFilePath,true);
-                      DownloadingCatalog.Completed += OnCatalogDownload;
+                        BuildScriptableObject buildScriptableObject = Resources.Load("BuildVersion/BuildVersion") as BuildScriptableObject;
+                        if (buildScriptableObject == null)
+                        {
+                            Debug.LogError("BuildScriptableObject is null. Make sure the BuildVersion asset is available in Resources/BuildVersion.");
+                            return;
+                        }
+
+                        AsyncOperationHandle DownloadingCatalog = Addressables.LoadContentCatalogAsync(buildScriptableObject.addressableCatalogFilePath, true);
+                        DownloadingCatalog.Completed += OnCatalogDownload;
 #endif
         }
     }
+
     async void OnCatalogDownload(AsyncOperationHandle handle)
     {
         if (handle.Status == AsyncOperationStatus.Succeeded)
@@ -70,23 +95,18 @@ public class AddressableDownloader : MonoBehaviour
             isDownloading = false;
         }
     }
+
     IEnumerator CheckCatalogs()
     {
         yield return Addressables.InitializeAsync();
         ConstantsHolder.isAddressableCatalogDownload = true;
-
     }
-    /// <summary>
-    /// To Download Addressable object. with call back from coroutine
-    /// </summary>
-    /// <param name="name">tag or key of a addressable object</param>
+
     public IEnumerator DownloadAddressableObj(int itemId, string key, string type, string _gender, AvatarController applyOn, Color hairColor, bool applyHairColor = true, bool callFromMultiplayer = false)
     {
         int _counter = 0;
         while (!ConstantsHolder.isAddressableCatalogDownload)
         {
-            //Debug.Log("<color=red> Waiting for Addressable Catalog to download </color>");
-
             yield return new WaitForSeconds(1f);
         }
 
@@ -103,19 +123,13 @@ public class AddressableDownloader : MonoBehaviour
             }
             while (true)
             {
-                LoadAssetAgain:
+            LoadAssetAgain:
                 AsyncOperationHandle loadOp;
-                // Debug.LogError("key :- "+key.ToLower());
-                //bool flag = false;
-                //loadOp = MemoryManager.GetReferenceIfExist(key.ToLower(), ref flag);
-                //if (!flag)
                 loadOp = Addressables.LoadAssetAsync<GameObject>(key.ToLower());
 
-               // SwitchToShoesHirokoKoshino.Instance?.SwitchLightFor_HirokoKoshino(key.ToLower());
                 yield return loadOp;
                 if (loadOp.Status == AsyncOperationStatus.Failed)
                 {
-                   // Debug.Log("rik Fail To load: " + key);
                     if (InventoryManager.instance && InventoryManager.instance.loaderForItems && InventoryManager.instance != null)
                         InventoryManager.instance.loaderForItems.SetActive(false);
                     if (GameManager.Instance != null)
@@ -129,15 +143,6 @@ public class AddressableDownloader : MonoBehaviour
                 {
                     if (loadOp.Result == null || loadOp.Result.Equals(null))  // Added by Ali Hamza to resolve avatar naked issue 
                     {
-                       // Debug.Log("rik result is null: " + key);
-                        //_counter++;
-                        //if (_counter < 5)
-                        //{
-                        //    Addressables.ClearDependencyCacheAsync(key);
-                        //    MemoryManager.RemoveAddressable(key);
-                        //}
-                        //else
-                        //{
                         applyOn.WearDefaultItem(type, applyOn.gameObject, _gender);
                         Addressables.ClearDependencyCacheAsync(key);
                         Addressables.ReleaseInstance(loadOp);
@@ -145,7 +150,6 @@ public class AddressableDownloader : MonoBehaviour
                         yield return new WaitForSeconds(1);
                         goto LoadAssetAgain;
                         yield break;
-                        //}
                     }
                     else
                     {
@@ -154,15 +158,8 @@ public class AddressableDownloader : MonoBehaviour
                         {
                             applyOn.isWearOrNot = true;
                         }
-                        //Debug.LogError(":Wear cloth");
-                        //loadOp.Result. = key;
-                        //MemoryManager.AddToReferenceList(loadOp, key.ToLower());
                         if (PlayerPrefs.GetInt("presetPanel") != 1)
                         {
-                            //if (callFromMultiplayer)
-                            //{
-                            //    applyOn.StichItem(itemId, loadOp.Result as GameObject, type, applyOn.gameObject, mulitplayerHairColor);
-                            //}
                             if (type == "Hair")
                             {
                                 if (ConstantsHolder.xanaConstants.isStoreActive)
@@ -172,16 +169,16 @@ public class AddressableDownloader : MonoBehaviour
 
                                     if (ConstantsHolder.xanaConstants.currentButtonIndex == 4 || ConstantsHolder.xanaConstants.currentButtonIndex == 10)
                                     {
-                                        // Preset Panel 
-                                        // Each Preset has its own color store in its Json implemet that color
                                         hairDefaultColor = hairColor;
                                     }
 
                                     applyOn.StichHairWithColor(itemId, downloadedHair, type, applyOn.gameObject, hairDefaultColor, callFromMultiplayer);
                                 }
                                 else
-                                    if(applyOn.GetComponent<CharacterBodyParts>())
-                                    applyOn.StichHairWithColor(itemId, loadOp.Result as GameObject, type, applyOn.gameObject, hairColor, callFromMultiplayer);
+                                {
+                                    if (applyOn.GetComponent<CharacterBodyParts>())
+                                        applyOn.StichHairWithColor(itemId, loadOp.Result as GameObject, type, applyOn.gameObject, hairColor, callFromMultiplayer);
+                                }
                             }
                             else
                             {
@@ -226,6 +223,7 @@ public class AddressableDownloader : MonoBehaviour
         else
             return skinnedMeshRenderer.sharedMaterials[0].GetColor(Hair_ColorName);
     }
+
     void DisableLoadingPanel()
     {
         //if (LoadingHandler.Instance != null)
@@ -249,10 +247,6 @@ public class AddressableDownloader : MonoBehaviour
             InventoryManager.instance.loaderForItems.SetActive(false);
         yield return null;
     }
-    ///// <summary>
-    ///// To Download Addressable Texture. with call back from coroutine
-    ///// </summary>
-    ///// <param name="name">tag or key of a addressable Texture</param>
 
     public IEnumerator DownloadAddressableTexture(string key, GameObject applyOn, CurrentTextureType nFTOjectType = 0)
     {
@@ -313,11 +307,9 @@ public class AddressableDownloader : MonoBehaviour
         }
         if (key != "" && Application.internetReachability != NetworkReachability.NotReachable)
         {
-
             key = key.ToLower();
             if (key == "eye_color_texture")
             {
-                // This Texture Store in Reference no need to download this texture
                 applyOn.GetComponent<CharacterBodyParts>().ApplyEyeLenTexture(applyOn.GetComponent<CharacterBodyParts>().Eye_Color_Texture, applyOn);
                 GameManager.Instance.isStoreAssetDownloading = false;
                 yield return null;
@@ -327,11 +319,6 @@ public class AddressableDownloader : MonoBehaviour
             while (true)
             {
                 AsyncOperationHandle loadOp;
-
-                //bool flag = false;
-
-                //loadOp = MemoryManager.GetReferenceIfExist(key, ref flag);
-                //if (!flag)
                 loadOp = Addressables.LoadAssetAsync<Texture>(key);
 
                 while (!loadOp.IsDone)
@@ -354,22 +341,12 @@ public class AddressableDownloader : MonoBehaviour
                 {
                     if (loadOp.Result == null || loadOp.Result.Equals(null))   // Added by Ali Hamza to resolve avatar naked issue
                     {
-                        //_counter++;
-                        //if (_counter < 5)
-                        //{
-                        //    Addressables.ClearDependencyCacheAsync(key);
-                        //    MemoryManager.RemoveAddressable(key);
-                        //}
-                        //else
-                        //{
                         AddressableDownloader.bundleAsyncOperationHandle.Add(loadOp);
                         applyOn.GetComponent<CharacterBodyParts>().SetTextureDefault(type, applyOn);
                         yield break;
-                        //}
                     }
                     else
                     {
-                        //MemoryManager.AddToReferenceList(loadOp, key);
                         switch (type)
                         {
                             case CurrentTextureType.Null:
@@ -416,21 +393,17 @@ public class AddressableDownloader : MonoBehaviour
                         GameManager.Instance.isStoreAssetDownloading = false;
                         yield break;
                     }
-
                 }
             }
         }
     }
+
     public IEnumerator DownloadAddressableTextureByName(string groupName, string key, GameObject applyOn, CurrentTextureType nFTOjectType = 0)
     {
         if (groupName != "" && Application.internetReachability != NetworkReachability.NotReachable)
         {
             string address = $"{groupName}/{key}.png"; // Combine group name and key to form the address
             AsyncOperationHandle loadOp;
-
-            //bool flag = false;
-            //loadOp = MemoryManager.GetReferenceIfExist(address, ref flag);
-            //if (!flag)
             loadOp = Addressables.LoadAssetAsync<Texture>(address);
 
             while (!loadOp.IsDone)
@@ -445,7 +418,6 @@ public class AddressableDownloader : MonoBehaviour
             }
             else if (loadOp.Status == AsyncOperationStatus.Succeeded)
             {
-                //MemoryManager.AddToReferenceList(loadOp, address);
                 AddressableDownloader.bundleAsyncOperationHandle.Add(loadOp);
                 switch (nFTOjectType)
                 {
@@ -461,11 +433,11 @@ public class AddressableDownloader : MonoBehaviour
             }
         }
     }
+
     void SavePresetFristTime()
     {
         if (PlayerPrefs.GetInt("presetPanel") == 1 && PlayerPrefs.GetInt("FristPresetSet") == 0)
         {
-            // preset panel is enable so saving preset to account 
             PlayerPrefs.SetInt("presetPanel", 0);
             PlayerPrefs.SetInt("FristPresetSet", 1);
             PlayerPrefs.Save();
@@ -482,7 +454,7 @@ public class AddressableDownloader : MonoBehaviour
             {
                 PlayerPrefs.SetString(bundleUpdateInfo.data.version, "0");
 
-                if(bundleUpdateInfo.data.force_update)
+                if (bundleUpdateInfo.data.force_update)
                 {
                     await Addressables.CleanBundleCache();
                     Caching.ClearCache();
@@ -511,7 +483,6 @@ public class AddressableDownloader : MonoBehaviour
         }
         else
             return www.downloadHandler.text;
-
     }
 
     [System.Serializable]
@@ -520,6 +491,7 @@ public class AddressableDownloader : MonoBehaviour
         public bool success;
         public BundleList data;
     }
+
     [System.Serializable]
     public class BundleList
     {

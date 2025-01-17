@@ -130,4 +130,4 @@ crash-reports/
 .vs/
 
 # Ignore Unity Library folder
-Library/
+[Ll]ibrary/
