@@ -125,3 +125,9 @@ crash-reports/
 
 # Ignore server data
 /ServerData/
+
+# Ignore Visual Studio files
+.vs/
+
+# Ignore Unity Library folder
+Library/
