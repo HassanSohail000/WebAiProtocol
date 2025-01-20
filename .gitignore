@@ -5,7 +5,6 @@
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
-[Bb]uild/
 [Bb]uilds/
 [Ll]ogs/
 [Mm]emoryCaptures/
@@ -120,8 +119,6 @@ crash-reports/
 # Ignore crash reports
 /[Cc]rash[Rr]eports/
 
-# Ignore build results
-/[Bb]uilds/
 
 # Ignore server data
 /ServerData/
