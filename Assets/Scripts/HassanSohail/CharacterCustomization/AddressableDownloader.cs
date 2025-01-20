@@ -104,9 +104,12 @@ public class AddressableDownloader : MonoBehaviour
 
     public IEnumerator DownloadAddressableObj(int itemId, string key, string type, string _gender, AvatarController applyOn, Color hairColor, bool applyHairColor = true, bool callFromMultiplayer = false)
     {
+        Debug.Log($"DownloadAddressableObj started for itemId: {itemId}, key: {key}, type: {type}, gender: {_gender}");
+
         int _counter = 0;
         while (!ConstantsHolder.isAddressableCatalogDownload)
         {
+            Debug.Log("Waiting for Addressable catalog to download...");
             yield return new WaitForSeconds(1f);
         }
 
@@ -116,20 +119,24 @@ public class AddressableDownloader : MonoBehaviour
             {
                 string tempName = key.Replace("gambeson", "shirt");
                 key = tempName;
+                Debug.Log($"Key modified to: {key}");
             }
             if (InventoryManager.instance != null && InventoryManager.instance.loaderForItems)
             {
                 InventoryManager.instance.loaderForItems.SetActive(true);
+                Debug.Log("Loader for items activated.");
             }
             while (true)
             {
             LoadAssetAgain:
+                Debug.Log($"Attempting to load asset with key: {key.ToLower()}");
                 AsyncOperationHandle loadOp;
                 loadOp = Addressables.LoadAssetAsync<GameObject>(key.ToLower());
 
                 yield return loadOp;
                 if (loadOp.Status == AsyncOperationStatus.Failed)
                 {
+                    Debug.LogError($"Failed to load asset with key: {key.ToLower()}");
                     if (InventoryManager.instance && InventoryManager.instance.loaderForItems && InventoryManager.instance != null)
                         InventoryManager.instance.loaderForItems.SetActive(false);
                     if (GameManager.Instance != null)
@@ -141,15 +148,16 @@ public class AddressableDownloader : MonoBehaviour
                 }
                 else if (loadOp.Status == AsyncOperationStatus.Succeeded)
                 {
+                    Debug.Log($"Successfully loaded asset with key: {key.ToLower()}");
                     if (loadOp.Result == null || loadOp.Result.Equals(null))  // Added by Ali Hamza to resolve avatar naked issue 
                     {
+                        Debug.LogWarning("Loaded asset is null, retrying...");
                         applyOn.WearDefaultItem(type, applyOn.gameObject, _gender);
                         Addressables.ClearDependencyCacheAsync(key);
                         Addressables.ReleaseInstance(loadOp);
                         Addressables.Release(loadOp);
                         yield return new WaitForSeconds(1);
                         goto LoadAssetAgain;
-                        yield break;
                     }
                     else
                     {
@@ -206,6 +214,10 @@ public class AddressableDownloader : MonoBehaviour
                     }
                 }
             }
+        }
+        else
+        {
+            Debug.LogError("No internet connection available.");
         }
     }
 

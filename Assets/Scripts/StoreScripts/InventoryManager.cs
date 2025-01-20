@@ -202,7 +202,7 @@ public class InventoryManager : MonoBehaviour
     public GameObject clothOuter_ComingSoon;
     public GameObject AvatarHair_ComingSoon, AvatarFace_ComingSoon, AvatarEyeBrow_ComingSoon, AvatarEye_ComingSoon, AvatarNose_ComingSoon, AvatarLip_ComingSoon;
 
-
+    public LoadPlayerAvatar loadPlayerAvatar;
     private void Awake()
     {
 
@@ -229,8 +229,8 @@ public class InventoryManager : MonoBehaviour
 
     void Start()
     {
-        load = LoadPlayerAvatar.instance_loadplayer.loader;
-        saveButton = LoadPlayerAvatar.instance_loadplayer.saveButton.gameObject;
+        load = loadPlayerAvatar.loader;
+        saveButton = loadPlayerAvatar.saveButton.gameObject;
         //saveStoreBtnImage = SaveStoreBtn.GetComponent<Image>();
         //saveStoreBtnButton = SaveStoreBtn.GetComponent<Button>();
         CheckAPILoaded = false;
