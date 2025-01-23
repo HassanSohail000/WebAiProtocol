@@ -1,8 +1,10 @@
-﻿using Photon.Pun;
+﻿using Newtonsoft.Json.Linq;
+using Photon.Pun;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.Events;
@@ -10,6 +12,12 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class ConstantsHolder : MonoBehaviour
 {
+//#if UNITY_WEBGL && !UNITY_EDITOR
+//    [DllImport("__Internal")]
+//    private static extern void LoadAuth(int score,string textupdate);
+//#endif
+
+
     public static ConstantsHolder xanaConstants;
     public delegate void UserNameToggleDeligate(int userNameToggleConstant);
     public static event UserNameToggleDeligate userNameToggleDelegate;
@@ -242,7 +250,7 @@ public class ConstantsHolder : MonoBehaviour
     public bool GameIsFinished = false;
     public string LastLobbyName;
   //  public bool isBuilderGame = false;
-# endregion
+#endregion
 
 
     public string r_EmoteStoragePersistentPath
@@ -431,5 +439,210 @@ public class ConstantsHolder : MonoBehaviour
     public static void OnInvokeUsername(int userNameToggle)
     {
         userNameToggleDelegate?.Invoke(userNameToggle);
+    }
+
+
+    public IEnumerator JavaScriptToken(string objects)
+    {
+        // GameManager.currentLanguage = "en";
+
+        yield return new WaitForSeconds(.5f);
+        try
+        {
+            JObject objectnew = JObject.Parse(objects);
+            //Debug.Log("Disable inpute===" + InputDisableHome);
+            Debug.Log("React Side Get Response===" + objectnew);
+            ConstantsGod.AUTH_TOKEN = objectnew.GetValue("UserToken").ToString();
+            
+            // InputDisableHome = (bool)objectnew.GetValue("disableInput");
+            // isLogin = ApiCallToken;
+            // isLogin = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYyLCJpYXQiOjE3MzUwMjc2NDQsImV4cCI6MTczNTExNDA0NH0.-8JpuAdPa4JeO-LZe6Wn8nQQXUMZzcsReU6q9r1wMlo";
+            //            XanaConstants.xanaConstants.EnviornmentName = objectnew.GetValue("EnvName").ToString();
+            //            //  XanaConstants.xanaConstants.EnviornmentName = "PMYRoomC";
+            //            PlayerPrefs.SetString("ChatLobby", XanaConstants.xanaConstants.EnviornmentName);
+            //            XanaConstants.xanaConstants.ChatLobby = XanaConstants.xanaConstants.EnviornmentName;
+            //            XanaConstants.xanaConstants.isBuilderScene = (bool)objectnew.GetValue("BuilderCheck");
+            //            XanaConstants.xanaConstants.builderMapID = (int)objectnew.GetValue("IsBuilderMapCode");
+            //            isGuest = (bool)objectnew.GetValue("IsGuest");
+            //            isWebGLEvent = (bool)objectnew.GetValue("join_webgl_event");
+            //            WebGLEventId = (int)objectnew.GetValue("join_webgl_event_id");
+            //            webglEventYoutubeurl = objectnew.GetValue("webgl_event_youtubeurl").ToString();
+            //            //  webglEventVideourl = objectnew.GetValue("webgl_event_offlineurl").ToString();
+            //            XanaConstants.xanaConstants.Language = objectnew.GetValue("lang").ToString();
+            //            GameManager.currentLanguage = XanaConstants.xanaConstants.Language;
+            //            AvatarJson = objectnew.GetValue("avatarjson").ToString();
+            //            if (string.IsNullOrEmpty(AvatarJson))
+            //            {
+            //                if (!string.IsNullOrEmpty(PlayerPrefs.GetString("AvatarJson")))
+            //                {
+            //                    AvatarJson = PlayerPrefs.GetString("AvatarJson");
+            //                }
+
+            //            }
+            //            AvatarName = objectnew.GetValue("avatarname").ToString();
+            //            if (string.IsNullOrEmpty(AvatarName))
+            //            {
+            //                if (!string.IsNullOrEmpty(PlayerPrefs.GetString("PlayerName")))
+            //                {
+            //                    AvatarName = PlayerPrefs.GetString("PlayerName");
+
+            //                }
+
+            //            }
+            //            isVoice = (bool)objectnew.GetValue("IsVoice");
+            //            isMessage = (bool)objectnew.GetValue("IsMessage");
+            //            isAnimation = (bool)objectnew.GetValue("IsAnimation");
+            //            WebGLMuseumId = (int)objectnew.GetValue("museumId");
+
+
+
+            //            // XanaConstants.xanaConstants.EnviornmentName = "D    Infinity Labo"
+            //            if (XanaConstants.xanaConstants.EnviornmentName.Contains("GOZ"))
+            //            {
+            //                XanaConstants.xanaConstants.EnviornmentName = "GOZANIMATOR HARUNA GOUZU GALLERY 2021";
+            //            }
+            //            if (XanaConstants.xanaConstants.EnviornmentName.Contains("D   Infinity Labo")
+            //             || XanaConstants.xanaConstants.EnviornmentName.Contains("D  Infinity Labo")
+            //             || XanaConstants.xanaConstants.EnviornmentName.Contains("D    Infinity Labo"))
+
+
+            //            {
+            //                XanaConstants.xanaConstants.EnviornmentName = "D Infinity Labo";
+            //            }
+
+
+            //            //if (XanaConstants.xanaConstants.EnviornmentName.Contains("XANA Lobby"))
+            //            //{
+            //            //    XanaConstants.xanaConstants.EnviornmentName = "XANA Lobby";
+            //            //}
+            //            // StartCoroutine(GameManager.Instance.FontLoadWait(5f));
+
+            //            StartCoroutine(EmoteAnimationPlay.Instance.getAllAnimations());
+            //            if (XanaConstants.xanaConstants.isBuilderScene)
+            //            {
+            //                StartCoroutine(AddressableDownloader.Instance.HoldLoadObject());
+            //            }
+
+            //            if (PlayerPrefs.GetInt("pmyloadfirst") == 1)
+            //            {
+            //                Debug.Log("PMY code call" + PlayerPrefs.GetInt("pmyloadfirst"));
+            //                StartCoroutine(GameManager.Instance.GetClassCodeFromServer());
+            //            }
+            //            else
+            //            {
+            //                Debug.Log("PMY code call 1" + !XanaConstants.xanaConstants.pmy_isClassAvailable);
+            //                if (!XanaConstants.xanaConstants.pmy_isClassAvailable)
+            //                {
+            //                    if (XanaConstants.xanaConstants.EnviornmentName.Equals("PMY ACADEMY"))
+            //                    {
+            //                        Debug.Log("PMY code call 2" + !XanaConstants.xanaConstants.pmy_isClassAvailable);
+            //                        StartCoroutine(GameManager.Instance.GetClassCodeFromServer());
+
+            //                    }
+            //                }
+            //            }
+
+
+            //            //else
+            //            //{
+            //            //    GameManager.currentLanguage ="en";
+            //            //}
+            //        }
+
+
+            //        catch (Exception e)
+            //        {
+
+            //        }
+
+            //        //  yield return StartCoroutine(AddressableDownloader.Instance.HoldLoadObject());
+
+
+            //        if (!string.IsNullOrEmpty(isLogin) && !string.IsNullOrEmpty(XanaConstants.xanaConstants.EnviornmentName) ||
+            //            !string.IsNullOrEmpty(isLogin) && XanaConstants.xanaConstants.isBuilderScene)
+            //        {
+            //            if (!XanaConstants.xanaConstants.EnviornmentName.Contains("PMY ACADEMY"))
+            //            {
+
+            //                SetParameter();
+            //            }
+            //            else
+            //            {
+            //                Debug.Log("PMY code call 3" + XanaConstants.xanaConstants.pmy_isClassAvailable);
+            //                if (PlayerPrefs.GetInt(ConstantsGod.XANA_BACK) != 2 && PlayerPrefs.GetInt("PMY") != 1)
+            //                {
+            //                    PlayerPrefs.SetInt("PMY", 1);
+            //                    Debug.Log("PMY Acadamy value==" + PlayerPrefs.GetInt(ConstantsGod.XANA_BACK));
+            //                    PlayerPrefs.SetFloat("pmyvol", -1);
+            //                }
+
+            //                if (PlayerPrefs.GetInt("pmyloadfirst") == 1)
+            //                {
+            //                    Debug.Log("PMY code call 4" + XanaConstants.xanaConstants.pmy_isClassAvailable);
+            //                    SetParameter();
+            //                    //                    foreach (var item in XanaConstants.xanaConstants.pmy_ClassCode)
+            //                    //                    {
+            //                    //                        // Debug.Log("code value 3---" + item.codeText);
+
+
+
+            //                    //                        if (item.codeText.ToString().Trim().Equals(PlayerPrefs.GetString("PMY code").Trim().ToString()))
+            //                    //                        {
+            //                    //                            Debug.Log("code value 2---" + item.codeText);
+
+            //                    //                            //Debug.Log("code value 1---" + classCodeInputField);
+            //                    //                            XanaConstants.xanaConstants.pmySchooldDataID = item.id;
+
+            //                    //                            Debug.Log("<color=green> PMY -- Class Available  </color>");
+            //                    //                            XanaConstants.xanaConstants.pmy_isClassAvailable = true;
+            //                    //                            PlayerPrefs.SetInt("pmyloadfirst", 1);
+            //                    //                            XanaConstants.xanaConstants.pmy_joinedClassCode = classCodeInputField_text.text;
+            //                    //                            //XanaConstants.xanaConstants.EnviornmentName = "PMY ACADEMY";
+            //                    //                            // LoadingHandler.Instance.ShowLoading();
+            //                    //                            Debug.Log("Class call====");
+            //                    //#if UNITY_WEBGL && !UNITY_EDITOR
+            //                    //        WebGLInput.captureAllKeyboardInput = true;
+            //                    //#endif
+            //                    //#if UNITY_WEBGL == true && UNITY_EDITOR == false
+            //                    //    PMYLoad(true);
+
+            //                    //#endif
+            //                    //                            // enterClassCodePanel.SetActive(false);
+
+            //                    //                            //LoadingHandler.Instance.UpdateLoadingSlider(1 * .2f);
+            //                    //                            //LoadingHandler.Instance.UpdateLoadingStatusText("Loading World");
+
+            //                    //                         //   CodeValid = true;
+            //                    //                            //    WorldManager.instance.PlayWorld();
+            //                    //                            break;
+            //                    //                        }
+
+            //                    //                    }
+
+            //                }
+            //                else
+            //                {
+            //                    if (!XanaConstants.xanaConstants.pmy_isClassAvailable)
+            //                    {
+
+            //#if UNITY_WEBGL == true && UNITY_EDITOR == false
+            //    HidePreset(true);
+            //#endif
+            //                        LoadingHandler.Instance.HideLoading();
+            //#if UNITY_WEBGL == true && UNITY_EDITOR == false
+            //    Load (100,"Complete...");
+            //#endif
+            //#if UNITY_WEBGL && !UNITY_EDITOR
+            //        WebGLInput.captureAllKeyboardInput = false;
+            //#endif
+            //                        enterClassCodePanel.SetActive(true);
+            //                    }
+            //                }
+
+        }
+        catch (Exception e) { 
+            
+        }
+
     }
 }
